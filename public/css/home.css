@@ -601,6 +601,18 @@ html {
         font-size: 20px;
     }
 
+    .benefit .benefit-box .benefit-content{
+        display: flex;
+        margin: 0 30px;
+        padding-bottom: 30px;
+    }
+
+    .benefit .benefit-box .benefit-content i{
+        margin-right: 12px;
+        font-size: 32px;
+        color: var(--green);    
+    }
+
     .service .service-contain {
         display: flex;
         flex-wrap: wrap;
