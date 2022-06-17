@@ -181,3 +181,108 @@ html {
 .btn-home{
     margin-bottom: 20px;
 }
+
+/* Header end */
+.main-container{
+    width: 100%;
+}
+.main-container .row{
+    display: flex;
+    margin: 40px auto;
+    margin-bottom: 0;
+}
+.main-container .row .box-config{
+    width: 380px;
+    padding-left: 15px;
+    padding-right: 48px
+}
+.main-container .row .box-info{
+    width: calc(100% - 385px);
+    padding-left: 15px;
+    padding-right: 48px
+}
+.main-container .row .box-config .text-header{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+.main-container .row .box-config .text-content{
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: inline;
+}
+.main-container .row .box-config .box-control-config{
+    margin-top: 25px;
+}
+.main-container .row .box-config .box-control-config label{
+    font-size: 17px;
+    margin-left: 5px;
+}
+.main-container .row .box-config .box-control-config input{
+    width: 15px;
+    height: 15px;
+    transform: translateY(1px);
+    cursor: pointer;
+}
+.main-container .row .box-info .box-info-view{
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+.main-container .row .box-info .name-header{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--dark);
+    width: 100%;
+    padding-bottom: 16px;
+    border-bottom: 3px solid rgba(204, 204, 204, 0.349);
+}
+
+.main-container .row .box-info #my-infor{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+}
+.main-container .row .box-info #my-infor .avatar-preview{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 2px solid rgba(209, 32, 32, 0.562);
+}
+.main-container .row .box-info #my-infor .avatar-preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.main-container .row .box-info #my-infor ul{
+    margin-left: 15px;
+}
+.main-container .row .box-info #my-infor ul li, .main-container .row .box-info .description-info{
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: var(--dark);
+}
+.main-container .row .box-info .description-info{
+    margin-top: 10px;
+    line-height: 1.2;
+}
+
+.box-btn-config{
+    width: 100%;
+}
+
+.box-btn-config .btn{
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--blue);
+}
+
+.box-btn-config .btn:hover{
+    background-color: var(--blue-head);
+}
+.hidden{
+    display: none;
+}
