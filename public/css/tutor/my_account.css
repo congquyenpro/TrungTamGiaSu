@@ -107,3 +107,77 @@ html {
     margin-right: 5px;
     font-size: 25px;
 }
+
+/* Header */
+.header .nav-main {
+    height: 75px;
+    background-color: var(--blue-head);
+    position: relative;
+}
+
+.header .nav-main .logo img {
+    position: absolute;
+    top: 8px;
+    height: 4rem;
+}
+
+.header .nav-main ul {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
+}
+
+.header .nav-main ul li{
+    margin-top: 18px;
+    display: inline-block;
+    color: var(--white);
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header .nav-main ul li a {
+    color: var(--white);
+
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid #15161641;
+}
+
+.header .flex .navbar a {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    color: var(--color-text);
+}
+
+.header .flex .navbar a:hover {
+    text-decoration: underline;
+    color: var(--orange);
+}
+
+#menu-btn {
+    display: none;
+    position: absolute;
+    right: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    line-height: 75px;
+    padding: 0 15px;
+    height: 85px;
+}
+
+#menu-btn span{
+    margin-left: 10px;
+}
+
+.btn-home{
+    margin-bottom: 20px;
+}
