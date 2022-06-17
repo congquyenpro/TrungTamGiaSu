@@ -286,3 +286,46 @@ html {
 .hidden{
     display: none;
 }
+/* .main-container .row .box-info */
+
+/* start change info */
+#my-change-infor{
+    margin-top: 10px;
+}
+.input-set-new-value{
+    width: calc(100% - 120px);
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    padding: 5px;
+}
+#my-change-infor ul li{
+    margin-top: 10px;
+}
+#my-change-infor ul li span{
+    width: 100px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.box-set-new-value{
+    width: calc(100% - 120px);
+    margin-left: 100px;
+    border: 1px solid #ccc;
+    transform: translateY(-19px);
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: -19px;
+    resize: vertical;
+    border-radius: 3px;
+}
+
+.btn-change-info{
+    width: 40%;
+}
+
+.error-message-input{
+    border-bottom: 1px solid rgb(248, 19, 19);
+}
+/* end change info */
+
+/* End content */
