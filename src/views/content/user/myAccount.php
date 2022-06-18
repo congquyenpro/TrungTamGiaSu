@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="<?php echo $actual_link ?>/public/css/my_account.css">
 <div class="main-container">
         <div class="row">
             <div class="box-config">
@@ -93,6 +93,59 @@
                         </button>
                     </div>
                 </div>
+                <form action="<?php echo $actual_link ?>/user/update" method="post" id="box-edit" class="box-info-view hidden" enctype="multipart/form-data">
+                    <div class="name-header">
+                        Chỉnh sửa thông tin cá nhân
+                    </div>
+                    <div id="my-change-infor">\
+                        <ul>
+                            <span id="error-message" style="color: red; font-size: 17px"></span>
+                            <li>
+                                <span>Avatar:</span>
+                                <input name="avatar" class="input-set-new-value" type="file">
+                            </li>
+                            <li>
+                                <span>Họ tên:</span>
+                                <input id="name-regex" name="name" class="input-set-new-value" type="text" value="<?php echo $_SESSION['name'] ?>" required>
+                            </li>
+                            <li>
+                                <span>Giới tính: </span> 
+                                <select class="input-set-new-value" name="gender" >
+                                    <?php if ($data['gender'] == 2) { ?>
+                                        <option value="2">nữ</option>
+                                        <option value="1">nam</option>
+                                    <?php } else { ?>
+                                        <option value="1">nam</option>
+                                        <option value="2">nữ</option>
+                                    <?php } ?>
+                                </select>
+                            </li>
+                            <li>
+                                <span>Email: </span>
+                                <input id="email-regex" name="email" class="input-set-new-value" type="email" value="<?php echo $data['email']?>" required>
+                            </li>
+                            <li>
+                                <span>Điện thoại: </span>
+                                <input id="phone-regex" name="phone_number" class="input-set-new-value" type="text" value="<?php echo $data['phone_number']?>" required>
+                            </li>
+                            <li>
+                                <span>Địa chỉ: </span>
+                                <br>
+                                <textarea class="box-set-new-value" name="address" required><?php echo $data['address']?></textarea>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="box-btn-config">
+                        <button type="submit" class="btn btn-change-info">
+                            Cập nhật thông tin tài khoản
+                        </button>
+                        <button class="btn btn-change-info" style="background: #ccc; color: rgb(83, 57, 57)" onclick="changeView()">
+                            Trở lại
+                        </button>
+                    </div>
+                </form>
             </div>
-        </div>
+        </div>   
 </div>
+<script src="<?php echo $actual_link ?>/public/javascript/myaccount.js"></script>
