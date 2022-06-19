@@ -1,7 +1,5 @@
-
-
-
-
+<link rel="stylesheet" href="<?php echo $actual_link ?>/public/css/change_pass.css">
+<link rel="stylesheet" href="<?php echo $actual_link ?>/public/css/class_list.css">
 <!-- Main section end -->
 <div class="main">
     <form action="<?php echo $actual_link ?>/<?php 
@@ -26,4 +24,14 @@
         <button class="btn-tutor-blue" style="cursor: pointer">Thay Đổi</button>
     </form>
 </div>
-
+<!-- Main section end -->
+<script>
+    document.getElementById('change-pass').onsubmit = function(e) {
+        document.getElementById('aleart').innerHTML = "";
+        if (document.getElementById('password1').value != document.getElementById('password2').value){
+            document.getElementById('aleart').innerHTML = "Mật khẩu không trùng";
+            e.preventDefault();
+        }
+    }
+</script>
+<script src="<?php echo $actual_link ?>/public/javascript/main.js"></script>
