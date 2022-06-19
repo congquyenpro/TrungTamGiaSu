@@ -1,11 +1,11 @@
-<link rel="stylesheet" href="/public/css/blog.css">
+<link rel="stylesheet" href="<?php echo $actual_link ?>/public/css/blog.css">
 <!-- Main-container section start -->
 <section class="container-main">
         <div class="container">
             <nav>
                 <ol class="my-home">
                     <li class="breadcumb-item">
-                        <a href="/home/read"><i class="fa-solid fa-house"></i></a>
+                        <a href="<?php echo $actual_link ?>/home/read"><i class="fa-solid fa-house"></i></a>
                     </li>
                     <span>/</span>
                     <li class="breadcumb-item">
@@ -55,11 +55,11 @@
 
             <?php foreach ($data[1] as $blog) { ?>
                 <div class="content-block">
-                    <a href="/home/view_blog/<?php echo $blog['id'] ?>" class="content-img">
+                    <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>" class="content-img">
                         <img src="<?php echo $actual_link ?>/public/images/blog/<?php echo $blog['image'] ?>" alt="">
                     </a>
                     <div class="content-disc">
-                        <a href="/home/view_blog/<?php echo $blog['id'] ?>"><h3 class="disc-title mb-30">
+                        <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>"><h3 class="disc-title mb-30">
                             <?php echo $blog['title'] ?>
                         </h3></a>
                         <div class="disc-disc mb-30 text-justify fix-size">
@@ -67,7 +67,7 @@
                             <?php echo $blog['description'] ?>
                         </div>
                         <div class="disc-more-detail">
-                            <a href="/home/view_blog/<?php echo $blog['id'] ?>" class="disc-detail mr-20">
+                            <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>" class="disc-detail mr-20">
                                 <i class="fa-solid fa-chevrons-right"></i>
                                 Xem chi tiết
                             </a>
