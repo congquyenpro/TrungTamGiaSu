@@ -50,3 +50,41 @@
                 </div>
             </div>
         </div>
+        
+        <div class="general">
+            <?php $count = 0  ?>
+            <?php foreach ($data[1] as $blog) { $count++; ?>
+                <div class="content-block">
+                    <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id']?>" class="content-img">
+                        <img src="<?php echo $actual_link ?>/public/images/blog/<?php echo $blog['image'] ?>" alt="">
+                    </a>
+                    <div class="content-disc">
+                        <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id']?>"><h3 class="disc-title mb-30">
+                            <?php echo $blog['title'] ?>
+                        </h3></a>
+                        <div class="disc-disc mb-30 text-justify fix-size">
+                            <!-- <?php echo substr($blog['description'], 0 , 200) ?> -->
+                            <?php echo $blog['description'] ?>
+                        </div>
+                        <div class="disc-more-detail">
+                            <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id']?>" class="disc-detail mr-20">
+                                <i class="fa-solid fa-chevrons-right"></i>
+                                Xem chi tiết
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+            <?php if ($count == 0) { ?>
+                <div class="content-block">
+                    <h2 style="color:red">Danh sách blog trống</h2>
+                </div>
+            <?php } ?>
+        </div>
+    </section>
+    <!-- Main-container section end -->
+    <script>
+        document.getElementById('search-input').addEventListener('keyup', function(e) {
+            document.getElementById('search').href = "my_blog&search=" + this.value;
+        })
+    </script>
