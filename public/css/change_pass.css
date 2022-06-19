@@ -75,3 +75,21 @@ html {
     text-align: justify;
 }
 
+.btn-tutor-blue {
+    background-color: var(--primary);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.btn-tutor-blue:hover {
+    background-color: var(--orange);
+}
+
+.btn-tutor-blue i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
