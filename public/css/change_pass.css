@@ -51,10 +51,6 @@ html {
     background-color: var(--green);
 }
 
-.btn:hover {
-    background-color: var(--green);
-}
-
 .mb-20 {
     margin-bottom: 20px;
 }
