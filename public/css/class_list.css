@@ -715,5 +715,7 @@ html {
         z-index: 100;
     }
 
-    
+    .header .nav-main ul{
+        display: none;
+    }
 }
