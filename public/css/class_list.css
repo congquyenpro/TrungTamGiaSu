@@ -241,3 +241,236 @@ html {
     margin-left: 10px;
 }
 
+/* Header end */
+/*Blog home */
+.container-main {
+    min-height: 100vh;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.container .my-home {
+    display: flex;
+    color: var(--dark);
+    padding: 30px;
+    margin-left: 10px;
+}
+
+.container .my-home span{
+    margin:0 5px;
+}
+
+.container .my-home a{
+    color: var(--blue);
+}
+
+.header .flex .navbar.active{
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100%);
+}
+
+.head-text {
+    display: flex;
+}
+
+.head-text .text-heading {
+    position: relative;
+    padding: 10px;
+    margin-left: 30px;
+    font-size: 24px;
+}
+
+.head-text .text-class {
+    display: flex;
+    padding: 15px;
+    margin-left: 30px;
+}
+
+.head-text .text-class .empty-class{
+    color: #6c757d;
+}
+
+.head-text .text-class .s-class{
+    color: #007bff;
+}
+
+.head-text .text-class .text-class-item{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.head-text .text-class .text-class-item i{
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+.filter .title {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #205493;
+    font-size: 20px;
+}
+
+.filter .title i{
+    margin-right: 5px;
+    margin-left: 30px;
+}
+
+.filter .filter-group {
+    text-transform: capitalize;
+    padding: 20px;
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
+}
+
+.filter .filter-group .filter-subject-group,
+.filter .filter-group .filter-level-group,
+.filter .filter-group .filter-ask-group,
+.filter .filter-group .filter-area-group
+{
+    cursor: pointer;
+    margin: 20px 0;
+    justify-content: center;
+    display: none;
+    width: 100%;
+}
+
+.filter .filter-group .filter-item:hover .filter-subject-group,
+.filter .filter-group .filter-item:hover .filter-level-group,
+.filter .filter-group .filter-item:hover .filter-ask-group,
+.filter .filter-group .filter-item:hover .filter-area-group
+{
+    display: block;
+}
+
+.filter .filter-group .filter-subject-group .filter-subject-item,
+.filter .filter-group .filter-level-group .filter-level-item,
+.filter .filter-group .filter-ask-group .filter-ask-item,
+.filter .filter-group .filter-area-group .filter-area-item
+{
+    margin-top: 5px;
+}
+
+.filter .filter-group .filter-subject-group .filter-clean,
+.filter .filter-group .filter-level-group .filter-clean,
+.filter .filter-group .filter-ask-group .filter-clean,
+.filter .filter-group .filter-area-group .filter-clean
+{   
+    margin-top: 10px;
+}
+
+.filter .filter-group .filter-subject-group .filter-clean .bodertop,
+.filter .filter-group .filter-level-group .filter-clean .bodertop,
+.filter .filter-group .filter-ask-group .filter-clean .bodertop,
+.filter .filter-group .filter-area-group .filter-clean .bodertop{
+    border-top: 1px solid #ccc;
+    margin-bottom: 5px;
+    width: 150px;
+}
+
+.filter .filter-group .filter-subject-group .filter-clean #filter-clear,
+.filter .filter-group .filter-level-group .filter-clean #filter-clear1,
+.filter .filter-group .filter-ask-group .filter-clean #filter-clear2,
+.filter .filter-group .filter-area-group .filter-clean #filter-clear3{
+    margin-right: 35px;
+}
+
+.filter .filter-group .filter-subject-group .filter-clean #filter-lean i,
+.filter .filter-group .filter-level-group .filter-clean #filter-lean1 i,
+.filter .filter-group .filter-ask-group .filter-clean #filter-lean2 i,
+.filter .filter-group .filter-area-group .filter-clean #filter-lean3 i{
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.filter .filter-group .filter-item .item-text-head{
+    border-radius: 5px;
+    color: #6c757d;
+    outline: 1px solid #ccc;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+
+.filter .filter-group .filter-item .item-text-head i{
+    margin-left: 15px;
+    font-size: 12px;
+}
+
+.filter .filter-group .filter-btn button{
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    background-color: var(--orange);
+    max-height: 40px;
+    padding: 10px 25px;
+    text-align: center;
+    border-radius: 5px;
+    justify-items: center;
+}
+
+.class-group {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 40px;
+    max-width: 100%;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.class-group .class-item-box{
+    outline: 1px solid #ccc;
+    margin-right: 25px;
+    height: 300px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.class-group .class-item-box .class-code{
+    padding: 10px;
+    background-color: #0071bc;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.class-group .class-item-box .container-class{
+    padding: 20px;
+}
+
+.class-group .class-item-box .class-grade,
+.class-group .class-item-box .class-location,
+.class-group .class-item-box .class-fee,
+.class-group .class-item-box .class-ask
+{
+    margin-bottom: 10px;
+}
+
+.class-group .class-item-box .class-grade i,
+.class-group .class-item-box .class-location i,
+.class-group .class-item-box .class-fee i,
+.class-group .class-item-box .class-ask i
+{
+    margin-right: 5px;
+}
+
+.class-group .class-item-box .class-detail-btn
+{
+    background-color: var(--green);
+    width: fit-content;
+    color: black;
+    top: 250px;
+    left: 60px;
+    position: absolute;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
