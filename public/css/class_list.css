@@ -723,4 +723,11 @@ html {
         display: block;
         z-index: 1;
     }
+
+    .header .nav-main .logo img {
+        position: absolute;
+        /* top: 8px; */
+        left: 10px;
+        height: 64px;
+    }
 }
