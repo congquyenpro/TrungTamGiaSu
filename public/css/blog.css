@@ -256,3 +256,160 @@ html {
 }
 
 /* Header end */
+/*Blog home */
+.container-main {
+    min-height: 100vh;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.container .my-home {
+    display: flex;
+    color: var(--dark);
+    padding: 30px;
+    margin-left: 10px;
+}
+
+.container .my-home span{
+    margin:0 5px;
+}
+
+.container .my-home a{
+    color: var(--blue);
+}
+
+.form {
+    display: flex;
+}
+
+.form .text-heading {
+    position: relative;
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.form .text-heading h1{
+    font-size: 32px;
+}
+
+.form .form-fill {
+    position: relative;
+    max-width: 100%;
+    margin-left: 400px;
+}
+
+.form .form-all {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.form .search-input {
+    max-width: 400px;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    height: 38px;
+    display: inline-block;
+    color: #333;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #aab7c2;
+    border-right: none;
+    border-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.form .search-btn {
+    background: #00a63f;
+    border: 0;
+    border-radius: 15px;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    height: 38px;
+    margin: 0;
+    padding: 0;
+    width: 3rem;
+    cursor: pointer;
+}
+
+.form .category-box-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.form .category-box-group .category-box-item{
+    box-shadow: 0 0 3px 0 rgb(47 47 47 / 80%);
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 0.85rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.form .category-box-group .category-box-item a{
+    padding: 0.25rem 1rem;
+    display: inline-block;
+    color: #666;
+    border-radius: 5px;
+}
+
+.form .category-box-group .category-box-item .category-title{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.form .category-box-group .category-box-item:hover{
+    background-color: #5b616b;
+}
+
+.form .category-box-group .category-box-item:hover .category-title{
+    color: white;
+}
+
+/* Nội dung */
+.content-block {
+    display: flex;
+    padding: 30px;
+    margin: 0 10px;
+}
+
+.content-block .content-img img {
+    /* max-width: 100%; */
+    width: 225px;
+    object-fit: cover;
+    object-position: center;
+    height: 150px;
+    margin-right: 120px;
+}
+
+.content-block .content-disc{
+    margin-right: 50px;
+}
+
+.content-block .content-disc-title .disc-disc,
+.content-block .content-disc .disc-title {
+    color: #333;
+}
+
+.content-block .content-disc .disc-title:hover {
+    color: var(--primary);
+}
+
+.content-block .content-disc .disc-more-detail .disc-category:hover a,
+.content-block .content-disc .disc-more-detail .disc-detail:hover{
+    color: var(--orange);
+}
