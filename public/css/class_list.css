@@ -659,3 +659,28 @@ html {
     }
 }
 
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    .head-text {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .header .flex .navbar{
+        display: none;
+    }
+
+    .header .nav-main .nav-phone{
+        display: none;
+    }
+
+    .content-block .content-img{
+        margin-right: 15px;
+    }
+
+    .content-block .content-disc{
+        margin-right: 0px;
+    }
+}
+
