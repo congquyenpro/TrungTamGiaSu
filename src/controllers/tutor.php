@@ -47,3 +47,17 @@ class tutor extends Controllers{
                 $this->view("tutor","editPassword","Đổi mật khẩu",[]);
             }
         }
+        public function change_password_processing(){
+            $password   = addslashes($_POST['old_pass']);
+            $new_pass   = addslashes($_POST['new_pass']);
+            $secure_pass = password_hash($new_pass, PASSWORD_BCRYPT);
+            $save = $this->model("giaSuModels");
+            $actual_link = $this->getUrl();
+            if ($save->ChangePass($password,$secure_pass)){
+                $_SESSION['done'] = "Đổi mk thành công";
+                header("Location: $actual_link/tutor/my_account");
+            }else{
+                $_SESSION['error'] = "Mật khẩu cũ không đúng";
+                header("Location: $actual_link/tutor/change_password");
+            }
+        }
