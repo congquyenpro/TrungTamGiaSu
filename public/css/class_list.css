@@ -718,4 +718,9 @@ html {
     .header .nav-main ul{
         display: none;
     }
+
+    .flex .navbar a{
+        display: block;
+        z-index: 1;
+    }
 }
