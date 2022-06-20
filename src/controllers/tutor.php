@@ -38,7 +38,7 @@ class tutor extends Controllers{
                 'subject'       => $myAccount['subject']
             ]);
         }
-        // Hiên Thị đổi mật khẩu
+        // Hiển thị đổi mật khẩu
         public function change_password(){
             if ($this->checkLogin() == false){
                 $actual_link = $this->getUrl();
@@ -47,6 +47,7 @@ class tutor extends Controllers{
                 $this->view("tutor","editPassword","Đổi mật khẩu",[]);
             }
         }
+        //Xử lý thay đổi mật khẩu
         public function change_password_processing(){
             $password   = addslashes($_POST['old_pass']);
             $new_pass   = addslashes($_POST['new_pass']);
@@ -54,10 +55,10 @@ class tutor extends Controllers{
             $save = $this->model("giaSuModels");
             $actual_link = $this->getUrl();
             if ($save->ChangePass($password,$secure_pass)){
-                $_SESSION['done'] = "Đổi mk thành công";
+                $_SESSION['done'] = "Đổi mật thành công";
                 header("Location: $actual_link/tutor/my_account");
             }else{
-                $_SESSION['error'] = "Mật khẩu cũ không đúng";
+                $_SESSION['error'] = "Mật khẩu hiện tại không đúng";
                 header("Location: $actual_link/tutor/change_password");
             }
         }
