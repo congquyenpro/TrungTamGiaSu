@@ -323,6 +323,7 @@ html {
         border-bottom: none;
     }
 
+    
     .header .nav-main #menu-btn {
         display: inline;
         transition: .2s linear;
