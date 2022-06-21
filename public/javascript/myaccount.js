@@ -39,9 +39,14 @@ function changeView(){
 boxEdit.onsubmit = function(event){
     errorMessage.textContent = "";
     name.classList.remove('error-message-input');
+    email.classList.remove('error-message-input');
     if (isValid(name.value) == false){
         event.preventDefault();
         name.classList.add('error-message-input');
         errorMessage.textContent = "Tên nhập sai định dạng (a-z)";
+    }else if (validateEmail(email.value) == null){
+        event.preventDefault();
+        email.classList.add('error-message-input');
+        errorMessage.textContent = "Email sai định dạng";
     }
 }
