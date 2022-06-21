@@ -18,3 +18,7 @@ function removeAscent (str) {
     str = str.replaceAll(" ",'');
     return str;
 }
+function isValid (string) {
+    var re = /^[a-zA-Z!@#\$%\^\&*\)\(+=._-]{2,}$/g // regex here
+    return re.test(removeAscent(string))
+}
