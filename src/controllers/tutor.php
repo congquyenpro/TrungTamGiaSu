@@ -12,10 +12,26 @@ class tutor extends Controllers{
         }
         return false;
     }
-    // hàm hiển thị phần login
+    // hàm phần login
     public function login(){
         $this->view("tutor","tutor/login","Đăng nhập",[]);
     }
+
+    public function login_processing(){
+        $email = addslashes($_POST['email']);
+        $password = addslashes($_POST['password']);
+        
+        $login = $this->model("giaSuModels");
+        $actual_link = $this->getUrl();
+
+        if($login->loginUser($email,$password)){
+            header("Location: $actual_link/tutor/my_account");
+        }else{
+            $_SESSION['error'] = "Email hoặc mật khẩu không đúng!";
+            header("Location: $actual_link/tutor/login");
+        }
+    }
+
         // hàm hiển thị phần register
         public function register(){
             $this->view("tutor","tutor/register","Đăng kí",[]);
