@@ -21,3 +21,11 @@
                 </ol>
             </nav>
         </div>
+        <div class="content">
+            <h1 class="text-heading mb-20"><?php echo $data["title"]?></h1>
+            <p class="sub-heading mb-20"><?php echo $data["description"]?></p>
+            <img width="100%" height="auto" src="<?php echo $actual_link ?>/public/images/blog/<?php echo $data['image'] ?>" alt="">
+            <?php echo $data['content']?>
+        </div>
+
+    </section>
