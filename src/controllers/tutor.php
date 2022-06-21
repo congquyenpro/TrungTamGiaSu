@@ -26,10 +26,19 @@ class tutor extends Controllers{
             $name = addslashes($_POST["name"]);
             $email = addslashes($_POST['email']);
             $password = addslashes($_POST['password']);
+            
             $secure_pass = password_hash($password, PASSWORD_BCRYPT);
+
             $save = $this->model("giaSuModels");
             $actual_link = $this->getUrl();
-            header("Location: $actual_link/tutor/login");
+
+            if ($save->CreateUser($name,$email,$secure_pass)){
+                $_SESSION['success'] = "Đăng kí tài khoản thành công, vui lòng đăng nhập";
+                header("Location: $actual_link/tutor/login");
+            }else{
+                $_SESSION['error'] = "Email này đã được sử dụng, vui lòng đăng kí lại";
+                header("Location: $actual_link/tutor/register");
+            }
         }
 
         // Hiển thị phần tài khoản của tôi
