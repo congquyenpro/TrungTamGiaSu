@@ -108,3 +108,39 @@ html {
     margin-right: 5px;
     font-size: 25px;
 }
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-48 {
+    margin-bottom: 48px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.bdbottom {
+    border-bottom: 1px solid #ccc;
+    width: 700px;
+}
+
+.mt-5 {
+    margin-top: 8px;
+}
+
+.mb-5 {
+    margin-bottom: 8px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
