@@ -1,4 +1,4 @@
-{
+* {
     font-family :-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     margin: 0;
     padding: 0;
@@ -8,41 +8,14 @@
     text-decoration: none;
     list-style: none;
     transition: all .3s ease;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-.my-navbar {
-    height: 3rem;
-}
-
-.align-items-center {
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-}
-
-.mt-4, .my-4 {
-    margin-top: 1.5rem !important;
-}
-
 :root {
-    --main-color: #be9c79;
-    --black-color: #333;
-    --white-color: #fff;
-    --light-color: #666;
-    --border-color: .1rem solid var(--black-color);
-    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
-    --border-color: .1rem solid var(--black-color);
-    --white-color: #fff;
     --blue-head: #112e51;
     --blue: #007bff;
     --pink: #e83e8c;
@@ -63,18 +36,44 @@ html {
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
-    --black: #212529; 
     --color-text: #5b616b;
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
 
-.ml-5 {
-    margin-left: 5px;
+.btn {
+    display: inline-block;
+    background-color: var(--orange);
+    cursor: pointer;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 8px 15px;
+    border-radius: 10px;
 }
 
-.mr-5 {
-    margin-right: 5px;
+.btn:hover {
+    background-color: var(--green);
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-48 {
+    margin-bottom: 48px;
+}
+
+.pad-8-15 {
+    padding: 8 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
 }
 
 .btn-tutor-blue {
@@ -109,48 +108,78 @@ html {
     font-size: 25px;
 }
 
-.mb-30 {
-    margin-bottom: 30px;
+/* Header */
+.header .nav-main {
+    height: 75px;
+    background-color: var(--blue-head);
+    position: relative;
 }
 
-.mb-48 {
-    margin-bottom: 48px;
+.header .nav-main .logo img {
+    position: absolute;
+    top: 8px;
+    height: 4rem;
 }
 
-.mr-20 {
-    margin-right: 20px;
+.header .nav-main ul {
+    position: absolute;
+    right: 0;
+    margin-right: 50px;
 }
 
-.mb-20 {
+.header .nav-main ul li{
+    margin-top: 18px;
+    display: inline-block;
+    color: var(--white);
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.header .nav-main ul li a {
+    color: var(--white);
+
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1rem 3rem;
+    border-bottom: 1px solid #15161641;
+}
+
+.header .flex .navbar a {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+    color: var(--color-text);
+}
+
+.header .flex .navbar a:hover {
+    text-decoration: underline;
+    color: var(--orange);
+}
+
+#menu-btn {
+    display: none;
+    position: absolute;
+    right: 0;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    line-height: 75px;
+    padding: 0 15px;
+    height: 85px;
+}
+
+#menu-btn span{
+    margin-left: 10px;
+}
+
+.btn-home{
     margin-bottom: 20px;
 }
 
-.bdbottom {
-    border-bottom: 1px solid #ccc;
-    width: 700px;
-}
-
-.mt-5 {
-    margin-top: 8px;
-}
-
-.mb-5 {
-    margin-bottom: 8px;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-justify {
-    text-align: justify;
-}
-
-.btn-tutor-blue {
-    background-color: var(--primary);
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    color: var(--white);
-    font-size: 20px;
-}
+/* Header end */
