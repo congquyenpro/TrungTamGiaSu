@@ -33,6 +33,7 @@ html {
 .mt-4, .my-4 {
     margin-top: 1.5rem !important;
 }
+
 :root {
     --main-color: #be9c79;
     --black-color: #333;
@@ -87,4 +88,69 @@ html {
 
 .btn-tutor-blue:hover {
     background-color: var(--orange);
+}
+
+.btn-tutor-logout {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--white);
+    border: 2px solid var(--white);
+    font-size: 20px;
+}
+
+.btn-tutor-logout:hover {
+    background-color: rgba(255, 255, 255, 0.253);
+}
+
+.btn-tutor-logout i {
+    margin-right: 5px;
+    font-size: 25px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-48 {
+    margin-bottom: 48px;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.bdbottom {
+    border-bottom: 1px solid #ccc;
+    width: 700px;
+}
+
+.mt-5 {
+    margin-top: 8px;
+}
+
+.mb-5 {
+    margin-bottom: 8px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.btn-tutor-blue {
+    background-color: var(--primary);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--white);
+    font-size: 20px;
 }
