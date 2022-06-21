@@ -25,3 +25,14 @@ function isValid (string) {
 function isVietnamesePhoneNumber(number) {
     return /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/.test(number);
 }
+const email         = document.getElementById('email-regex'),
+    name            = document.getElementById('name-regex'),
+    phone           = document.getElementById('phone-regex'),
+    boxView         = document.getElementById('box-view'),
+    errorMessage    = document.getElementById('error-message'),
+    boxEdit         = document.getElementById('box-edit');
+    
+function changeView(){
+    boxView.classList.toggle('hidden');
+    boxEdit.classList.toggle('hidden');
+}
