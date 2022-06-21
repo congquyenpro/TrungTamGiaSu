@@ -36,3 +36,12 @@ function changeView(){
     boxView.classList.toggle('hidden');
     boxEdit.classList.toggle('hidden');
 }
+boxEdit.onsubmit = function(event){
+    errorMessage.textContent = "";
+    name.classList.remove('error-message-input');
+    if (isValid(name.value) == false){
+        event.preventDefault();
+        name.classList.add('error-message-input');
+        errorMessage.textContent = "Tên nhập sai định dạng (a-z)";
+    }
+}
