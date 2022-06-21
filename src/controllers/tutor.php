@@ -20,6 +20,18 @@ class tutor extends Controllers{
         public function register(){
             $this->view("tutor","tutor/register","Đăng kí",[]);
         }
+
+        // hàm xử lý đăng ký
+        public function register_processing(){
+            $name = addslashes($_POST["name"]);
+            $email = addslashes($_POST['email']);
+            $password = addslashes($_POST['password']);
+            $secure_pass = password_hash($password, PASSWORD_BCRYPT);
+            $save = $this->model("giaSuModels");
+            $actual_link = $this->getUrl();
+            header("Location: $actual_link/tutor/login");
+        }
+
         // Hiển thị phần tài khoản của tôi
         public function my_account(){
             if ($this->checkLogin() == false){
@@ -62,16 +74,3 @@ class tutor extends Controllers{
                 header("Location: $actual_link/tutor/change_password");
             }
         }
-<<<<<<< HEAD
-
-        public function register_processing(){
-            $name = addslashes($_POST["name"]);
-            $email = addslashes($_POST['email']);
-            $password = addslashes($_POST['password']);
-            $secure_pass = password_hash($password, PASSWORD_BCRYPT);
-            $save = $this->model("giaSuModels");
-            $actual_link = $this->getUrl();
-            header("Location: $actual_link/tutor/login");
-        }
-=======
->>>>>>> eda9f52f69a5d4c2f8a523b9acaea8ba1dccea4f
