@@ -70,6 +70,9 @@ const container     = document.querySelector(".container"),
             }else if (validateEmail(email.value) == null){
                 event.preventDefault();
                 alertError.innerHTML = "Email sai định dạng";
+            }else if(password.value != confirm.value){
+                event.preventDefault();
+                alertError.innerHTML = "Mật khẩu không trùng";
             }
         }
     }
