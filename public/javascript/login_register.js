@@ -67,6 +67,9 @@ const container     = document.querySelector(".container"),
             if (isValid(name.value) == false){
                 event.preventDefault();
                 alertError.innerHTML = "Tên sai định dạng";
+            }else if (validateEmail(email.value) == null){
+                event.preventDefault();
+                alertError.innerHTML = "Email sai định dạng";
             }
         }
     }
