@@ -32,4 +32,41 @@ const container     = document.querySelector(".container"),
       Login         = document.getElementById('submit-login'),
       Register      = document.getElementById('register-submit'),
       alertError    = document.getElementById('alert-eros');
-      
+
+      //   js code to show/hide password and change icon
+      pwShowHide.forEach(eyeIcon =>{
+        eyeIcon.addEventListener("click", ()=>{
+            pwFields.forEach(pwField =>{
+                if(pwField.type ==="password"){
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                }else{
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            }) 
+        })
+    })
+
+    if (Login != null){
+        Login.onsubmit = function(event){
+            if (validateEmail(email.value) == null){
+                event.preventDefault();
+                alertError.innerHTML = "Email sai định dạng";
+            }
+        }
+    }else{
+        Register.onsubmit = function(event){
+            alertError.innerHTML = "";
+            if (isValid(name.value) == false){
+                event.preventDefault();
+                alertError.innerHTML = "Tên sai định dạng";
+            }
+        }
+    }
