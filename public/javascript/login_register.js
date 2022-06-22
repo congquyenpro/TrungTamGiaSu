@@ -22,3 +22,14 @@ function isValid (string) {
     var re = /^[a-zA-Z!@#\$%\^\&*\)\(+=._-]{2,}$/g // regex here
     return re.test(removeAscent(string))
 }
+const container     = document.querySelector(".container"),
+      pwShowHide    = document.querySelectorAll(".showHidePw"),
+      pwFields      = document.querySelectorAll(".password"),
+      email         = document.getElementById('email-regex'),
+      name          = document.getElementById('name-regex'),
+      password      = document.getElementById('password-regex'),
+      confirm       = document.getElementById('confirm-password-regex'),
+      Login         = document.getElementById('submit-login'),
+      Register      = document.getElementById('register-submit'),
+      alertError    = document.getElementById('alert-eros');
+      
