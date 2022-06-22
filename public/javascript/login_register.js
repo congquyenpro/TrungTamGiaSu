@@ -32,4 +32,24 @@ const container     = document.querySelector(".container"),
       Login         = document.getElementById('submit-login'),
       Register      = document.getElementById('register-submit'),
       alertError    = document.getElementById('alert-eros');
-      
+
+      //   js code to show/hide password and change icon
+      pwShowHide.forEach(eyeIcon =>{
+        eyeIcon.addEventListener("click", ()=>{
+            pwFields.forEach(pwField =>{
+                if(pwField.type ==="password"){
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                }else{
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon =>{
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            }) 
+        })
+    })
