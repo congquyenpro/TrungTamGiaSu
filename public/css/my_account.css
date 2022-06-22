@@ -1,3 +1,4 @@
+
 * {
     font-family :-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     margin: 0;
@@ -152,15 +153,19 @@ html {
 
 .header .flex .navbar a {
     margin-left: 1rem;
-    font-size: 1.4rem;
+    font-size: 0.9rem;
     color: var(--color-text);
+    padding: 1rem 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .header .flex .navbar a:hover {
-    text-decoration: underline;
-    color: var(--orange);
-}
+    text-decoration: none;
+    color: #0071bc;
+    background-color: #ccc;
 
+}
 #menu-btn {
     display: none;
     position: absolute;
