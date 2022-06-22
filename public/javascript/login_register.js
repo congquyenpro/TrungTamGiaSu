@@ -53,3 +53,12 @@ const container     = document.querySelector(".container"),
             }) 
         })
     })
+
+    if (Login != null){
+        Login.onsubmit = function(event){
+            if (validateEmail(email.value) == null){
+                event.preventDefault();
+                alertError.innerHTML = "Email sai định dạng";
+            }
+        }
+    }
