@@ -139,6 +139,7 @@ class tutor extends Controllers{
         if ($save->updateOne($_SESSION['id'], $name, $email, $phone_number, $gender, $avatar, $school_level, $subject, $address, $description)){
             $_SESSION['name']   = $name;
             $_SESSION['avatar'] = $avatar;
+            $_SESSION['done'] = "Thay Đổi thông tin thành công!";
             header("Location: $actual_link/tutor/my_account");
         }else{
             $_SESSION['error'] = "Lỗi Trùng email!";
