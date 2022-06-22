@@ -122,6 +122,16 @@ class tutor extends Controllers{
 
         // Xử lý file gửi lên
         $file = basename($_FILES["avatar"]["name"]);
+        // Kiểm tra xem tên có rỗng không
+        if ($file != ""){
+            // Tạo tên
+            $target_file = "./public/images/avatar";
+            $date = new DateTime();
+            $avatar = $name . $date->getTimestamp() . "." . strtolower(pathinfo($file,PATHINFO_EXTENSION));
+            $target_file = $target_file . "/" . $avatar;
+            // Lưu file
+            move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file);   
+        }
 
         // Lưu thông tin
         $save = $this->model("giaSuModels");
