@@ -99,5 +99,14 @@ class tutor extends Controllers{
         }
     }
 
+    // hàm chức năng đăng xuất
+    public function logout(){
+        // Xóa Phiên và render về trang login
+        session_destroy();
+        $actual_link = $this->getUrl();;
+        header("Location: $actual_link/tutor/login");
+    }
+
+    
 
         
