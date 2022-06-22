@@ -61,4 +61,12 @@ const container     = document.querySelector(".container"),
                 alertError.innerHTML = "Email sai định dạng";
             }
         }
+    }else{
+        Register.onsubmit = function(event){
+            alertError.innerHTML = "";
+            if (isValid(name.value) == false){
+                event.preventDefault();
+                alertError.innerHTML = "Tên sai định dạng";
+            }
+        }
     }
