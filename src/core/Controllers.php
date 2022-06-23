@@ -13,9 +13,8 @@
         //  nhận đường dẫn hiện tại
         protected function getUrl(){
             if ("$_SERVER[HTTP_HOST]" == "localhost"){
-                return "/TrungTamGiaSu/TrungTamGiaSu;
+                return "/TrungTamGiaSu";
             }
             return "http://$_SERVER[HTTP_HOST]";
         }
     }
-?>
