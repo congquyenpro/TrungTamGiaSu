@@ -1,5 +1,5 @@
 let menu = document.querySelector('#menu-btn');
-let navbar = document.querySelector('.header .flex-navbar');
+let navbar = document.querySelector('.header .flex .navbar');
 
 menu.onclick = () => {
     menu.classList.toggle('fa-times');
@@ -7,8 +7,8 @@ menu.onclick = () => {
 }
 
 window.onscroll = () => {
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
 }
 
 document.getElementById("filter-clear").onclick = function () 
@@ -53,4 +53,10 @@ document.getElementById("filter-clear3").onclick = function ()
     for (var i = 0; i < checkboxes.length; i++){
         checkboxes[i].checked = false;
     }
+};
+
+
+const regbtn = document.getElementById("js-reg-btn");
+regbtn.onclick = function(){
+    alert("Chức năng đang bảo trì")
 };

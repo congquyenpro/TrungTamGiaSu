@@ -50,7 +50,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="general">
             <?php $count = 0  ?>
             <?php foreach ($data[1] as $blog) { $count++; ?>

@@ -14,14 +14,15 @@
                 </ol>
             </nav> 
         </div>
+        
         <div class="form">
             <div class="text-heading">
-                <h1>Blog gia sư</h1>
+                <h1>Blog khách hàng</h1>
             </div>
             <div class="form-fill">
                 <div class="form-all">
                     <input id="search-input" type="search" class="search-input" size="35px" placeholder="Tìm kiếm blog" value="<?php echo $data[0]?>">
-                    <a id="search" href="tutor_blog&search=">
+                    <a id="search" href="user_blog&search=">
                         <button class="search-btn"><i class="icon-search fa-solid fa-magnifying-glass"></i></button>
                     </a>
                 </div>
@@ -49,36 +50,38 @@
                 </div>
             </div>
         </div>
-        
-        <div class="general">
-<?php foreach ($data[1] as $blog) { ?>
-    <div class="content-block">
-        <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>" class="content-img">
-            <img src="<?php echo $actual_link ?>/public/images/blog/<?php echo $blog['image'] ?>" alt="">
-        </a>
-        <div class="content-disc">
-            <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>"><h3 class="disc-title mb-30">
-                <?php echo $blog['title'] ?>
-            </h3></a>
-            <div class="disc-disc mb-30 text-justify fix-size">
-                <!-- <?php echo substr($blog['description'], 0 , 200) ?> -->
-                <?php echo $blog['description'] ?>
-            </div>
-            <div class="disc-more-detail">
-                <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>" class="disc-detail mr-20">
-                    <i class="fa-solid fa-chevrons-right"></i>
-                    Xem chi tiết
-                </a>
-            </div>
-        </div>
-    </div>
-<?php } ?>
 
-</div>
-</section>
-<!-- Main-container section end -->
-<script>
-document.getElementById('search-input').addEventListener('keyup', function(e) {
-document.getElementById('search').href = "user_blog&search=" + this.value;
-})
-</script>
+        <div class="general">
+
+            <?php foreach ($data[1] as $blog) { ?>
+                <div class="content-block">
+                    <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>" class="content-img">
+                        <img src="<?php echo $actual_link ?>/public/images/blog/<?php echo $blog['image'] ?>" alt="">
+                    </a>
+                    <div class="content-disc">
+                        <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>"><h3 class="disc-title mb-30">
+                            <?php echo $blog['title'] ?>
+                        </h3></a>
+                        <div class="disc-disc mb-30 text-justify fix-size">
+                            <!-- <?php echo substr($blog['description'], 0 , 200) ?> -->
+                            <?php echo $blog['description'] ?>
+                        </div>
+                        <div class="disc-more-detail">
+                            <a href="<?php echo $actual_link ?>/home/view_blog/<?php echo $blog['id'] ?>" class="disc-detail mr-20">
+                                <i class="fa-solid fa-chevrons-right"></i>
+                                Xem chi tiết
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+
+        </div>
+    </section>
+    <!-- Main-container section end -->
+    <script>
+        document.getElementById('search-input').addEventListener('keyup', function(e) {
+            document.getElementById('search').href = "user_blog&search=" + this.value;
+        })
+    </script>
+    

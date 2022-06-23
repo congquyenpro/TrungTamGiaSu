@@ -1,10 +1,10 @@
 const validateEmail = (email) => {
     return String(email)
-    .toLowerCase()
-    .match(
+      .toLowerCase()
+      .match(
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
-};
+      );
+  };
 function removeAscent (str) {
     if (str === null || str === undefined) return str;
     str = str.toLowerCase();
@@ -33,8 +33,8 @@ const container     = document.querySelector(".container"),
       Register      = document.getElementById('register-submit'),
       alertError    = document.getElementById('alert-eros');
 
-      //   js code to show/hide password and change icon
-      pwShowHide.forEach(eyeIcon =>{
+    //   js code to show/hide password and change icon
+    pwShowHide.forEach(eyeIcon =>{
         eyeIcon.addEventListener("click", ()=>{
             pwFields.forEach(pwField =>{
                 if(pwField.type ==="password"){
@@ -53,7 +53,7 @@ const container     = document.querySelector(".container"),
             }) 
         })
     })
-
+    
     if (Login != null){
         Login.onsubmit = function(event){
             if (validateEmail(email.value) == null){
