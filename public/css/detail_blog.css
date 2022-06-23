@@ -234,3 +234,130 @@ html {
     color: var(--orange);
 }
 /* Header css end */
+.container-main {
+    min-height: 100vh;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    max-width: 100%;
+}
+
+.container .my-home {
+    display: flex;
+    color: var(--dark);
+    padding: 30px;
+    margin-left: 10px;
+}
+
+.container .my-home span{
+    margin:0 5px;
+}
+
+.container .my-home a{
+    color: var(--blue);
+}
+
+/* content */
+.content {
+    padding: 0 200px 50px 200px;
+}
+
+.content .text-heading{
+    font-size: 30px;
+}
+
+/* Responsive */
+/* PC */
+@media (min-width: 1024px){
+    
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    html {
+        font-size: 55%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 740px){
+
+    .header .flex {
+        padding: 0;
+        border-bottom: none;
+    }
+
+    .header .nav-main #menu-btn {
+        display: inline;
+        transition: .2s linear;
+        height: 75px;
+    }
+
+    .header .nav-main #menu-btn .fa-times {
+        transform: rotate(180deg);
+    }
+    .header .flex .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100%);
+        z-index: 100;
+    }
+
+    .header .nav-main{
+        max-width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .flex .navbar a{
+        display: block;
+        z-index: 1;
+    }
+
+    .header .flex .nav-main,
+    .header .nav-main .btn-blue,
+    .header .nav-main .btn-line{
+        display: none;
+    }
+
+
+    #menu-btn {
+        display: inline-block;
+        height: 75px;
+        transition: .2s linear;
+    }
+
+    #menu-btn .fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header .flex .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white-color);
+        border-top: var(--border-color);
+        border-bottom: var(--border-color);
+        clip-path: polygon(0 0,100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .content .text-heading {
+        display: block;
+        font-size: 25px;
+        width: 100%;
+        text-align: justify;
+    }
+
+    .content {
+        padding: 0 30px 30px 30px;
+    }
+}
