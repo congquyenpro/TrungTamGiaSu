@@ -5,3 +5,8 @@ menu.onclick = () => {
     menu.classList.toggle('fa-times');
     navbar.classList.toggle('active');
 }
+
+window.onscroll = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+}
