@@ -13,7 +13,7 @@ class home extends Controllers{
         }
         $model = $this->model('blogModels');
         $blogs = $model->selectValues(1,$search);
-        $this->view("user","user/Blog","blog khách hàng",[$search, $blogs]);
+        $this->view("user","user/Blog","blog khách hàng 1",[$search, $blogs]);
     }
     // Hiển thị phần blog gia sư
     public function tutor_blog($route = []){

@@ -7,22 +7,21 @@
                 <p class="text-content" style="color: green;">GC<?php echo $_SESSION['id']?></p>
                 <div style="width: 100%; height: 13px"></div>
                 <div class="box-control-config">
-                            <input type="checkbox">
-                            <label for="">Nhận thông báo qua SMS</label>
-                            <div style="width: 100%; height: 13px"></div>
-                            <input type="checkbox">
-                            <label for="">Nhận thông báo qua Email</label>
+                    <input type="checkbox">
+                    <label for="">Nhận thông báo qua SMS</label>
+                    <div style="width: 100%; height: 13px"></div>
+                    <input type="checkbox">
+                    <label for="">Nhận thông báo qua Email</label>
                 </div>
-
                 <div class="box-control-config">
-                        <div style="width: 100%; height: 10px"></div>
-                        <a href="<?php echo $actual_link ?>/home/my_blog/">
-                            Quản lý bài blog
-                        </a>
-                        <div style="width: 100%; height: 10px"></div>
-                        <a href="<?php echo $actual_link ?>/user/change_password/">
-                            Thay đổi mật khẩu
-                        </a>
+                    <div style="width: 100%; height: 10px"></div>
+                    <a href="<?php echo $actual_link ?>/home/my_blog/">
+                        Quản lý bài đăng
+                    </a>
+                    <div style="width: 100%; height: 10px"></div>
+                    <a href="<?php echo $actual_link ?>/user/change_password/">
+                        Thay đổi mật khẩu
+                    </a>
                 </div>
             </div>
             <div class="box-info">
@@ -86,18 +85,19 @@
                             </li>
                         </ul>
                     </div>
-
+                    
                     <div class="box-btn-config">
                         <button class="btn" onclick="changeView()">
                             Thay đổi thông tin tài khoản
                         </button>
                     </div>
                 </div>
+
                 <form action="<?php echo $actual_link ?>/user/update" method="post" id="box-edit" class="box-info-view hidden" enctype="multipart/form-data">
                     <div class="name-header">
                         Chỉnh sửa thông tin cá nhân
                     </div>
-                    <div id="my-change-infor">\
+                    <div id="my-change-infor">
                         <ul>
                             <span id="error-message" style="color: red; font-size: 17px"></span>
                             <li>
@@ -135,7 +135,7 @@
                             </li>
                         </ul>
                     </div>
-
+                    
                     <div class="box-btn-config">
                         <button type="submit" class="btn btn-change-info">
                             Cập nhật thông tin tài khoản
@@ -146,6 +146,6 @@
                     </div>
                 </form>
             </div>
-        </div>   
-</div>
+        </div>
+    </div>
 <script src="<?php echo $actual_link ?>/public/javascript/myaccount.js"></script>

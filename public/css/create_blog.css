@@ -87,6 +87,7 @@ html {
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
+
 .btn {
     display: inline-block;
     background-color: var(--orange);
@@ -244,6 +245,7 @@ html {
     background-color: #ccc;
 
 }
+
 .header .flex .login-regit a {
     color: var(--color-text);
     font-size: 1.2rem;
@@ -260,6 +262,7 @@ html {
 }
 
 /* Header end */
+
 /* start main */
 .main{
     width: 100%;
@@ -274,6 +277,7 @@ html {
     width: 100%;
     padding: 10px 100px;
 }
+
 .input-value{
     padding-top: 10px;
     margin-bottom: 10px;
@@ -322,6 +326,8 @@ html {
     background-color: rgb(72, 12, 238);
 }
 /* end main */
+
+
 @media (max-width: 1024px){
 
     .header .nav-main .nav-phone{

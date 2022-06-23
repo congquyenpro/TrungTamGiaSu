@@ -8,7 +8,7 @@
         }else{
             echo "user";
         }
-        ?>/change_password_processing/" method="post" id="change-pass" class="change-pass-box">
+    ?>/change_password_processing/" method="post" id="change-pass" class="change-pass-box">
         <h3 class="text-heading mb-20">Thay đổi mật khẩu</h3>
         <p class="mb-8">Nhập mật khẩu cũ của bạn</p>
         <?php

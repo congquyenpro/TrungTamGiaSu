@@ -20,7 +20,7 @@
                     </a>
                     <div style="width: 100%; height: 10px"></div>
                     <a href="<?php echo $actual_link ?>/tutor/change_password/">
-                        Đổi mật khẩu
+                        Thay đổi mật khẩu
                     </a>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         </div>
                         <ul>
                             <li>
-                                <span style="color: blue; font-weight: 600">Họ và tên:</span>
+                                <span style="color: blue; font-weight: 600">Họ tên:</span>
                                 <?php echo $_SESSION['name']?>
                             </li>
                             <li>
@@ -74,7 +74,7 @@
                                 ?>
                             </li>
                             <li>
-                                <span style="color: blue; font-weight: 600">Môn dạy: </span>
+                                <span style="color: blue; font-weight: 600">Môn dạy:  </span>
                                 <?php
                                     if ($data['subject'] == null){
                                         echo "<span style='color:red'>Chưa Xác định</span>";
@@ -84,7 +84,7 @@
                                 ?>
                             </li>
                             <li>
-                                <span style="color: blue; font-weight: 600">Cấp hoc: </span>
+                                <span style="color: blue; font-weight: 600">Đang dạy: </span>
                                 <?php
                                     if ($data['school_level'] == null){
                                         echo "<span style='color:red'>Chưa Xác định</span>";
@@ -136,7 +136,7 @@
                                 <input name="avatar" class="input-set-new-value" type="file">
                             </li>
                             <li>
-                                <span>Họ và tên:</span>
+                                <span>Họ tên:</span>
                                 <input id="name-regex" name="name" class="input-set-new-value" type="text" value="<?php echo $_SESSION['name'] ?>" required>
                             </li>
                             <li>

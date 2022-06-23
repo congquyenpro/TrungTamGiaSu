@@ -30,9 +30,9 @@
                 <a href="<?php echo $actual_link ?>/home/read#home">Trang chủ</a>
                 <a href="<?php echo $actual_link ?>/home/read#service">Dịch vụ</a>
                 <a href="<?php echo $actual_link ?>/home/read#contact">Liên hệ</a>
-                <a href="<?php echo $actual_link?>/home/user_blog">Blog khách hàng</a>
+                <a href="<?php echo $actual_link?>/home/user_blog">Thông báo</a>
                 <a href="<?php echo $actual_link?>/home/tutor_blog">Blog gia sư</a>
-                <a href="<?php echo $actual_link?>/home/create_blog">Viết Blog</a>
+                <a href="<?php echo $actual_link?>/home/create_blog">Viết bài</a>
                 <?php if(isset($_SESSION['lever'])) { 
                         if ($_SESSION['lever'] == 1) { ?>
                     <a href="<?php echo $actual_link?>/extra_class/create">Tạo lớp học</a>

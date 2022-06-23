@@ -5,8 +5,8 @@
             require_once "./src/models/". $model .".php";
             return new $model;
         }
-          // Hàm gọi phần view
-          protected function view($template,$view,$name_page,$data=[]){
+        // Hàm gọi phần view
+        protected function view($template,$view,$name_page,$data=[]){
             $actual_link = $this->getUrl();
             require_once "./src/views/template/". $template .".php";
         }
