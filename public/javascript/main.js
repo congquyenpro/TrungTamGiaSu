@@ -43,3 +43,14 @@ document.getElementById("filter-clear2").onclick = function ()
         checkboxes[i].checked = false;
     }
 };
+
+document.getElementById("filter-clear3").onclick = function () 
+{
+    // Lấy danh sách checkbox
+    var checkboxes = document.getElementsByName('name[3]');
+
+    // Lặp và thiết lập Uncheck
+    for (var i = 0; i < checkboxes.length; i++){
+        checkboxes[i].checked = false;
+    }
+};
