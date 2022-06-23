@@ -1,4 +1,4 @@
-<?php
+<?php 
 class userModels extends ConnectDB{
     // Tạo dữ liệu mới
     function CreateUser($name,$email,$password){
@@ -75,5 +75,27 @@ class userModels extends ConnectDB{
         // Ép dữ liệu từ mảng về 1
         $user = mysqli_fetch_array($user);
         return $user;
+    }
+    // Cập nhập dữ liệu
+    function updateOne($id, $name, $email, $phone_number, $gender, $avatar, $address){
+        // Câu truy vấn
+        $sql = "UPDATE
+                    `user`
+                SET
+                    `name` = '$name',
+                    `email` = '$email',
+                    `phone_number` = '$phone_number',
+                    `gender` = '$gender',
+                    `avatar` = '$avatar',
+                    `address` = '$address'
+                WHERE
+                    `id` = '$id'";
+        // Thực hiện truy vấn và kiểm tra
+        mysqli_query($this->connection,$sql);
+        if (mysqli_error($this->connection) == ""){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
