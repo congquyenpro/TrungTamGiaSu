@@ -231,13 +231,18 @@ html {
 
 .header .flex .navbar a {
     margin-left: 1rem;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     color: var(--color-text);
+    padding: 1rem 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .header .flex .navbar a:hover {
-    text-decoration: underline;
-    color: var(--orange);
+    text-decoration: none;
+    color: #0071bc;
+    background-color: #ccc;
+
 }
 
 .header .flex .login-regit a {

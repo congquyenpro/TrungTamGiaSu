@@ -210,7 +210,14 @@ html {
     border-bottom: 1px solid var(--color-text);
 }
 
-.header .flex .navbar a,
+.header .flex .navbar a{
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-text);
+    padding: 1rem 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
 .header .flex .login-regit a 
 {
     margin-left: 1rem;
@@ -218,7 +225,11 @@ html {
     color: var(--color-text);
 }
 
-.header .flex .navbar a:hover,
+.header .flex .navbar a:hover{
+    text-decoration: none;
+    color: #0071bc;
+    background-color: #ccc;
+}
 .header .flex .login-regit a:hover
 {
     text-decoration: underline;
