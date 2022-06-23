@@ -12,50 +12,14 @@ class tutor extends Controllers{
         }
         return false;
     }
-    // hàm chức năng đăng nhập
+    // hàm hiển thị phần login
     public function login(){
         $this->view("tutor","tutor/login","Đăng nhập",[]);
     }
-
-    public function login_processing(){
-        $email = addslashes($_POST['email']);
-        $password = addslashes($_POST['password']);
-        
-        $login = $this->model("giaSuModels");
-        $actual_link = $this->getUrl();
-
-        if($login->loginUser($email,$password)){
-            header("Location: $actual_link/tutor/my_account");
-        }else{
-            $_SESSION['error'] = "Email hoặc mật khẩu không đúng!";
-            header("Location: $actual_link/tutor/login");
-        }
-    }
-
-    // hàm chức năng đăng ký
+    // hàm hiển thị phần register
     public function register(){
         $this->view("tutor","tutor/register","Đăng kí",[]);
     }
-
-    public function register_processing(){
-        $name = addslashes($_POST["name"]);
-        $email = addslashes($_POST['email']);
-        $password = addslashes($_POST['password']);
-            
-        $secure_pass = password_hash($password, PASSWORD_BCRYPT);
-
-        $save = $this->model("giaSuModels");
-        $actual_link = $this->getUrl();
-
-        if ($save->CreateUser($name,$email,$secure_pass)){
-            $_SESSION['success'] = "Đăng kí tài khoản thành công, vui lòng đăng nhập";
-            header("Location: $actual_link/tutor/login");
-        }else{
-            $_SESSION['error'] = "Email này đã được sử dụng, vui lòng đăng kí lại";
-            header("Location: $actual_link/tutor/register");
-        }
-    }
-
     // Hiển thị phần tài khoản của tôi
     public function my_account(){
         if ($this->checkLogin() == false){
@@ -74,7 +38,7 @@ class tutor extends Controllers{
             'subject'       => $myAccount['subject']
         ]);
     }
-    // hàm chức năng đổi mật khẩu
+    // Hiên Thị đổi mật khẩu
     public function change_password(){
         if ($this->checkLogin() == false){
             $actual_link = $this->getUrl();
@@ -83,7 +47,7 @@ class tutor extends Controllers{
             $this->view("tutor","editPassword","Đổi mật khẩu",[]);
         }
     }
-
+    // Sử lý đổi mật khẩu
     public function change_password_processing(){
         $password   = addslashes($_POST['old_pass']);
         $new_pass   = addslashes($_POST['new_pass']);
@@ -91,25 +55,64 @@ class tutor extends Controllers{
         $save = $this->model("giaSuModels");
         $actual_link = $this->getUrl();
         if ($save->ChangePass($password,$secure_pass)){
-            $_SESSION['done'] = "Đổi mật thành công";
+            $_SESSION['done'] = "Đổi mk thành công";
             header("Location: $actual_link/tutor/my_account");
         }else{
-            $_SESSION['error'] = "Mật khẩu hiện tại không đúng";
+            $_SESSION['error'] = "Mật khẩu cũ không đúng";
             header("Location: $actual_link/tutor/change_password");
         }
     }
+    // xử lý đằng kí
+    public function register_processing(){
+        // Nhận dữ liệu gửi lên
+        $name = addslashes($_POST["name"]);
+        $email = addslashes($_POST['email']);
+        $password = addslashes($_POST['password']);
 
-    // hàm chức năng đăng xuất
+        // Mã hóa mật khẩu
+        $secure_pass = password_hash($password, PASSWORD_BCRYPT);
+
+        // Gọi model
+        $save = $this->model("giaSuModels");
+        $actual_link = $this->getUrl();
+        
+        // Gọi hàm Tạo tài khoản và kiểm tra
+        if ($save->CreateUser($name,$email,$secure_pass)){
+            $_SESSION['success'] = "Đăng kí tài khoản thành công, vui lòng đăng nhập";
+            header("Location: $actual_link/tutor/login");
+        }else{
+            $_SESSION['error'] = "Email này đã được sử dụng, vui lòng đăng kí lại";
+            header("Location: $actual_link/tutor/register");
+        }
+    }
+    // Xử lý đăng nhập
+    public function login_processing(){
+        // Nhận dữ liệu gửi lên
+        $email = addslashes($_POST['email']);
+        $password = addslashes($_POST['password']);
+        
+        // Gọi model
+        $login = $this->model("giaSuModels");
+        $actual_link = $this->getUrl();
+
+        // Gọi hàm Đăng nhập và kiểm tra
+        if($login->loginUser($email,$password)){
+            header("Location: $actual_link/tutor/my_account");
+        }else{
+            $_SESSION['error'] = "Email hoặc mật khẩu không đúng!";
+            header("Location: $actual_link/tutor/login");
+        }
+    }
+    // Xử lý đăng xuất
     public function logout(){
         // Xóa Phiên và render về trang login
         session_destroy();
         $actual_link = $this->getUrl();;
         header("Location: $actual_link/tutor/login");
     }
-
-    // Hàm chức năng cập nhật tài khoản
+    // Xử lý cập nhaapk tài khoản
     public function update(){  
-        // Nhận dữ liệu
+        // Nhận dữ liệu gửi lên
         $name           = addslashes($_POST['name']);
         $email          = addslashes($_POST['email']);
         $phone_number   = addslashes($_POST['phone_number']);
@@ -132,7 +135,6 @@ class tutor extends Controllers{
             // Lưu file
             move_uploaded_file($_FILES["avatar"]["tmp_name"], $target_file);   
         }
-
         // Lưu thông tin
         $save = $this->model("giaSuModels");
         $actual_link = $this->getUrl();;
@@ -147,7 +149,3 @@ class tutor extends Controllers{
         }
     }
 }
-
-    
-
-        

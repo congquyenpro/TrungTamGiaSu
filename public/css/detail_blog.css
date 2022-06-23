@@ -17,6 +17,7 @@ html {
 .my-navbar {
     height: 3rem;
 }
+
 .align-items-center {
     -ms-flex-align: center;
     align-items: center;
@@ -32,7 +33,6 @@ html {
 .mt-4, .my-4 {
     margin-top: 1.5rem !important;
 }
-
 
 :root {
     --main-color: #be9c79;
@@ -108,6 +108,7 @@ html {
     margin-right: 5px;
     font-size: 25px;
 }
+
 .mb-30 {
     margin-bottom: 30px;
 }
@@ -145,7 +146,6 @@ html {
     text-align: justify;
 }
 
-
 .btn-tutor-blue {
     background-color: var(--primary);
     padding: 10px 15px;
@@ -154,6 +154,8 @@ html {
     color: var(--white);
     font-size: 20px;
 }
+
+
 /* Header css start */
 .header .nav-main {
     display: flex;
@@ -234,6 +236,7 @@ html {
     color: var(--orange);
 }
 /* Header css end */
+
 .container-main {
     min-height: 100vh;
     max-width: 100%;
@@ -303,6 +306,7 @@ html {
     .header .nav-main #menu-btn .fa-times {
         transform: rotate(180deg);
     }
+
     .header .flex .navbar.active{
         clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100%);
         z-index: 100;

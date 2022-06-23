@@ -154,6 +154,7 @@ html {
 .text-justify {
     text-align: justify;
 }
+
 .btn-tutor-blue {
     background-color: var(--primary);
     padding: 10px 15px;
@@ -261,6 +262,7 @@ html {
 }
 
 /* Header end */
+
 /*Blog home */
 .container-main {
     min-height: 100vh;
@@ -418,6 +420,7 @@ html {
 .content-block .content-disc .disc-more-detail .disc-detail:hover{
     color: var(--orange);
 }
+
 /* Responsive */
 /* PC */
 

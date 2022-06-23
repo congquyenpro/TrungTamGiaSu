@@ -5,7 +5,7 @@
         private $hostname = 'localhost';
         private $user = 'root';
         private $password = '';
-        private $nameDB = 'trung-tam-gia-su-test'; 
+        private $nameDB = 'web_gia_su'; 
 
         // kết nối với DB
         function __construct(){
