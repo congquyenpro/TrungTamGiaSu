@@ -1,4 +1,3 @@
-
 * {
     font-family :-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     margin: 0;
@@ -166,6 +165,7 @@ html {
     background-color: #ccc;
 
 }
+
 #menu-btn {
     display: none;
     position: absolute;
@@ -293,7 +293,7 @@ html {
 }
 /* .main-container .row .box-info */
 
-/* start change info */
+/* start change ìnfo */
 #my-change-infor{
     margin-top: 10px;
 }
