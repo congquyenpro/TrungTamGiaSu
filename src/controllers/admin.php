@@ -1,5 +1,5 @@
 <?php 
-class user extends Controllers{
+class admin extends Controllers{
     // Kiểm tra đăng nhập
     public function checkLogin(){
         // Kiểm tra xem trong session có tồn tại phiên đăng nhập không
@@ -16,16 +16,12 @@ class user extends Controllers{
     public function login(){
         $this->view("user","user/login","Đăng nhập",[]);
     }
-    // Hiển thị đăng kí
-    public function register(){
-        $this->view("user","user/register","Đăng kí",[]);
-    }
     // hiển thị tài khoản của tôi
     public function my_account(){
         if ($this->checkLogin() == false){
             $actual_link = $this->getUrl();
             // Nếu chưa đăng nhập thì render về trang đăng nhập
-            header("Location: $actual_link/user/login");
+            header("Location: $actual_link/admin/login");
         }
         // gọi model của user
         $model = $this->model('userModels');
@@ -43,7 +39,7 @@ class user extends Controllers{
     public function change_password(){
         if ($this->checkLogin() == false){
             $actual_link = $this->getUrl();
-            header("Location: $actual_link/user/login");
+            header("Location: $actual_link/admin/login");
         }else{
             $this->view("user","editPassword","Đổi mật khẩu",[]);
         }
@@ -64,36 +60,13 @@ class user extends Controllers{
         // Kiểm tra mật khẩu
         if ($save->ChangePass($password,$secure_pass)){
             $_SESSION['done'] = "Đổi mk thành công";
-            header("Location: $actual_link/user/my_account");
+            header("Location: $actual_link/admin/my_account");
         }else{
             $_SESSION['error'] = "Mật khẩu cũ không đúng";
-            header("Location: $actual_link/user/change_password");
+            header("Location: $actual_link/admin/change_password");
         }
     }
     // Hiên Thị đổi mật khẩu
-    // sử lý đăng kí
-    public function register_processing(){
-        // Nhận dữ liệu gửi lên
-        $name = addslashes($_POST["name"]);
-        $email = addslashes($_POST['email']);
-        $password = addslashes($_POST['password']);
-
-        // Mã hóa mật khẩu
-        $secure_pass = password_hash($password, PASSWORD_BCRYPT);
-
-        // Gọi model
-        $save = $this->model("userModels");
-        $actual_link = $this->getUrl();
-
-        // Gọi hàm Tạo tài khoản và kiểm tra
-        if ($save->CreateUser($name,$email,$secure_pass)){
-            $_SESSION['success'] = "Đăng kí tài khoản thành công, vui lòng đăng nhập";
-            header("Location: $actual_link/user/login");
-        }else{
-            $_SESSION['error'] = "Email này đã được sử dụng, vui lòng đăng kí lại";
-            header("Location: $actual_link/user/register");
-        }
-    }
     // Xử lý đằng nhâp
     public function login_processing(){
         // Nhận dữ liệu gửi lên
@@ -106,10 +79,10 @@ class user extends Controllers{
 
         // Gọi hàm Đăng nhập và kiểm tra
         if($login->loginUser($email,$password)){
-            header("Location: $actual_link/user/my_account");
+            header("Location: $actual_link/admin/my_account");
         }else{
             $_SESSION['error'] = "Email hoặc mật khẩu không đúng!";
-            header("Location: $actual_link/user/login");
+            header("Location: $actual_link/admin/login");
         }
     }
     // Xửa lý đăng xuất
@@ -117,7 +90,7 @@ class user extends Controllers{
         // Xóa Phiên và render về trang login
         session_destroy();
         $actual_link = $this->getUrl();;
-        header("Location: $actual_link/user/login");
+        header("Location: $actual_link/admin/login");
     }
     // Sử lý cập nhập tài khoản
     public function update(){  
@@ -150,10 +123,28 @@ class user extends Controllers{
             $_SESSION['name']   = $name;
             $_SESSION['avatar'] = $avatar;
             $_SESSION['done'] = "Thay Đổi thông tin thành công!";
-            header("Location: $actual_link/user/my_account");
+            header("Location: $actual_link/admin/my_account");
         }else{
             $_SESSION['error'] = "Lỗi Trùng email!";
-            header("Location: $actual_link/user/my_account");
+            header("Location: $actual_link/admin/my_account");
         }
+    }
+    // Xem toàn bộ client
+    public function client($data = []){
+        $type = "1";
+        if (isset($data[0])){
+            $type = $data[0];
+        }
+        $clients = $this->model("clientModels");
+        $clients = $clients->selectValues($type);
+        $this->view("user","user/viewClient","Xem khách hàng",[$clients]);
+    }
+    public function set_client($data = []){
+        $id = $data[0];
+        $type = $data[1];
+        $clients = $this->model("clientModels");
+        $clients = $clients->updateClient($id, $type);
+        $actual_link = $this->getUrl();
+        header("Location: $actual_link/admin/client");
     }
 }
