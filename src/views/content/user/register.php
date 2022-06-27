@@ -2,9 +2,8 @@
 <div class="main-container">
     <div class="container active">
         <div class="forms">
-            <!-- Registration form -->
+            <!-- Registration Form -->
             <div class="form signup">
-
                 <span class="title">Đăng kí tài khoản người dùng</span>
 
                 <form id="register-submit" method="post" action="<?php echo $actual_link ?>/user/register_processing">
@@ -14,24 +13,19 @@
                         unset($_SESSION['error']);
                     }
                     ?>
-
                     <p id="alert-eros" style="color:red; transform: translateY(25px)"></p>
-
                     <div class="input-field">
                         <input id="name-regex" type="text" name="name" placeholder="Nhập tên của bạn" required>
                         <i class="uil uil-user"></i>
                     </div>
-
                     <div class="input-field">
                         <input id="email-regex" type="email" name="email" placeholder="Nhập email của bạn" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
-
                     <div class="input-field">
                         <input id="password-regex" type="password" name="password" class="password" placeholder="Tạo mật khẩu" required>
                         <i class="uil uil-lock icon"></i>
                     </div>
-                    
                     <div class="input-field">
                         <input id="confirm-password-regex" type="password" class="password" placeholder="Nhập lại mật khẩu" required>
                         <i class="uil uil-lock icon"></i>

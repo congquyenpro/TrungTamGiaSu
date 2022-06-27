@@ -16,10 +16,10 @@
                 <div class="box-control-config">
                     <div style="width: 100%; height: 10px"></div>
                     <a href="<?php echo $actual_link ?>/home/my_blog/">
-                        Quản lý bài blog
+                        Quản lý bài đăng
                     </a>
                     <div style="width: 100%; height: 10px"></div>
-                    <a href="<?php echo $actual_link ?>/tutor/change_password/">
+                    <a href="<?php echo $actual_link ?>/user/change_password/">
                         Thay đổi mật khẩu
                     </a>
                 </div>
@@ -95,6 +95,7 @@
                             </li>
                         </ul>
                     </div>
+<<<<<<< HEAD
                     <div class="description-info">
                         <span style="color: blue; font-weight: 600">Địa chỉ: </span>
                         <?php
@@ -116,6 +117,8 @@
                             }
                         ?>
                     </div>
+=======
+>>>>>>> 96651973b46c21162f5aa6656c1c75eaae43f4e9
                     
                     <div class="box-btn-config">
                         <button class="btn" onclick="changeView()">
@@ -124,7 +127,11 @@
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 <form action="<?php echo $actual_link ?>/tutor/update" method="post" id="box-edit" class="box-info-view hidden" enctype="multipart/form-data">
+=======
+                <form action="<?php echo $actual_link ?>/user/update" method="post" id="box-edit" class="box-info-view hidden" enctype="multipart/form-data">
+>>>>>>> 96651973b46c21162f5aa6656c1c75eaae43f4e9
                     <div class="name-header">
                         Chỉnh sửa thông tin cá nhân
                     </div>

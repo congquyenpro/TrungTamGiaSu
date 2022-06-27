@@ -5,17 +5,16 @@
             require_once "./src/models/". $model .".php";
             return new $model;
         }
-          // Hàm gọi phần view
-          protected function view($template,$view,$name_page,$data=[]){
+        // Hàm gọi phần view
+        protected function view($template,$view,$name_page,$data=[]){
             $actual_link = $this->getUrl();
             require_once "./src/views/template/". $template .".php";
         }
         //  nhận đường dẫn hiện tại
         protected function getUrl(){
             if ("$_SERVER[HTTP_HOST]" == "localhost"){
-                return "/TrungTamGiaSu/TrungTamGiaSu;
+                return "/trung-tam-gia-su";
             }
             return "http://$_SERVER[HTTP_HOST]";
         }
     }
-?>

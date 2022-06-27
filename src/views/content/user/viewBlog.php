@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="<?php echo $actual_link ?>/public/css/detail_blog.css">
     <section class="container-main">
         <div class="container">
-        <nav>
+            <nav>
                 <ol class="my-home">
                     <li class="breadcumb-item">
                         <a href="<?php echo $actual_link ?>/home/read"><i class="fa-brands fa-accusoft"></i></a>
