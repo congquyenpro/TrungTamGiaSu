@@ -1,3 +1,28 @@
+<link rel="stylesheet" href="<?php echo $actual_link ?>/public/css/detail_blog.css">
+<style>
+    table, td, th {
+    border: 1px solid black;
+    text-align: left;
+    }
+
+    table {
+    border-collapse: collapse;
+    width: calc(100% - 100px);
+    margin: 50px;
+    margin-top: 20px;
+    }
+
+    th {
+    text-align: left;
+    }
+</style>    
+
+<section class="container-main">
+    <br>
+    <h2 style="text-align: center">
+        Danh sách khách hàng đăng kí dịch vụ
+    </h2>
+    
 <table>
   <a href="<?php echo $actual_link ?>/admin/client" style="margin-left: 50px;">Danh sách khách hàng chờ liên lạc</a>
   <br>
@@ -50,3 +75,5 @@
     </tr>
   <?php } ?>
 </table>
+
+</section>
