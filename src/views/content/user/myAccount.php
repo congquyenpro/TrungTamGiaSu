@@ -95,7 +95,6 @@
                             </li>
                         </ul>
                     </div>
-<<<<<<< HEAD
                     <div class="description-info">
                         <span style="color: blue; font-weight: 600">Địa chỉ: </span>
                         <?php
@@ -117,8 +116,6 @@
                             }
                         ?>
                     </div>
-=======
->>>>>>> 96651973b46c21162f5aa6656c1c75eaae43f4e9
                     
                     <div class="box-btn-config">
                         <button class="btn" onclick="changeView()">
