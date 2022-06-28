@@ -6,7 +6,7 @@
         if ($_SESSION['lever'] == 2) {
             echo "tutor";
         }else{
-            echo "user";
+            echo "admin";
         }
     ?>/change_password_processing/" method="post" id="change-pass" class="change-pass-box">
         <h3 class="text-heading mb-20">Thay đổi mật khẩu</h3>
