@@ -9,7 +9,7 @@
                     </li>
                     <span>/</span>
                     <li class="breadcumb-item">
-                        <span>Blog khách hàng</span>
+                        <span>Thông báo</span>
                     </li>
                 </ol>
             </nav> 
@@ -17,7 +17,7 @@
         
         <div class="form">
             <div class="text-heading">
-                <h1>Blog khách hàng</h1>
+                <h1>Thông báo</h1>
             </div>
             <div class="form-fill">
                 <div class="form-all">
