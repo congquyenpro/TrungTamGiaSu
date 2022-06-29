@@ -21,6 +21,7 @@ Project website trung tâm gia sư
 - Viết bài
 - Nhận lớp*
 ### Admin
+- Cập nhật thông tin, đổi mật khẩu
 - Xem thông tin đăng kí
 - Tạo thông báo
 - Tạo lớp
