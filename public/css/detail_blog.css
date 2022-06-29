@@ -365,3 +365,17 @@ html {
         padding: 0 30px 30px 30px;
     }
 }
+
+.container-main th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  .container-main th, td {
+    border-bottom: 1px solid #ddd;
+  }
+  .container-main tr:nth-child(even) {background-color: #f2f2f2;}
+  .container-main th {
+    background-color: #04AA6D;
+    color: white;
+  }
+  

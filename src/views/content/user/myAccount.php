@@ -34,8 +34,8 @@
                             echo "<span style='color: blue;'>Cập nhập tài khoản thành công</span>";
                             unset($_SESSION['done']);
                         }else if (isset($_SESSION['error'])){
-                            echo "<span style='color: blue;'>Lỗi trùng Email hoặc lỗi file</span>";
-                            unset($_SESSION['done']);
+                            echo "<span style='color: red;'>Lỗi trùng Email hoặc lỗi file</span>";
+                            unset($_SESSION['error']);
                         } 
                     ?>
                     <div id="my-infor">
@@ -74,16 +74,47 @@
                                 ?>
                             </li>
                             <li>
-                                <span style="color: blue; font-weight: 600">Địa chỉ: </span>
+                                <span style="color: blue; font-weight: 600">Môn dạy:  </span>
                                 <?php
-                                    if ($data['phone_number'] == null){
+                                    if ($data['subject'] == null){
                                         echo "<span style='color:red'>Chưa Xác định</span>";
                                     }else{
-                                        echo $data['address'];
+                                        echo $data['subject'];
+                                    }
+                                ?>
+                            </li>
+                            <li>
+                                <span style="color: blue; font-weight: 600">Đang dạy: </span>
+                                <?php
+                                    if ($data['school_level'] == null){
+                                        echo "<span style='color:red'>Chưa Xác định</span>";
+                                    }else{
+                                        echo $data['school_level'];
                                     }
                                 ?>
                             </li>
                         </ul>
+                    </div>
+                    <div class="description-info">
+                        <span style="color: blue; font-weight: 600">Địa chỉ: </span>
+                        <?php
+                            if ($data['address'] == null){
+                                echo "<span style='color:red'>Chưa Xác định</span>";
+                            }else{
+                                echo $data['address'];
+                            }
+                        ?>
+                    </div>
+                    <div class="description-info">
+                        <b># Giới thiệu</b>
+                        <br>
+                        <?php
+                            if ($data['description'] == null){
+                                echo "<span style='color:red'>Chưa Xác định</span>";
+                            }else{
+                                echo $data['description'];
+                            }
+                        ?>
                     </div>
                     
                     <div class="box-btn-config">
@@ -93,7 +124,11 @@
                     </div>
                 </div>
 
+<<<<<<< HEAD
+                <form action="<?php echo $actual_link ?>/tutor/update" method="post" id="box-edit" class="box-info-view hidden" enctype="multipart/form-data">
+=======
                 <form action="<?php echo $actual_link ?>/user/update" method="post" id="box-edit" class="box-info-view hidden" enctype="multipart/form-data">
+>>>>>>> 96651973b46c21162f5aa6656c1c75eaae43f4e9
                     <div class="name-header">
                         Chỉnh sửa thông tin cá nhân
                     </div>
@@ -129,9 +164,22 @@
                                 <input id="phone-regex" name="phone_number" class="input-set-new-value" type="text" value="<?php echo $data['phone_number']?>" required>
                             </li>
                             <li>
+                                <span>Đang học: </span>
+                                <input id="school_level" name="school_level" class="input-set-new-value" type="text" value="<?php echo $data['school_level']?>" required>
+                            </li>
+                            <li>
+                                <span>Môn dạy: </span>
+                                <input id="subject" name="subject" class="input-set-new-value" type="text" value="<?php echo $data['subject']?>" required>
+                            </li>
+                            <li>
                                 <span>Địa chỉ: </span>
                                 <br>
                                 <textarea class="box-set-new-value" name="address" required><?php echo $data['address']?></textarea>
+                            </li>
+                            <li>
+                                <span>Giới thiệu </span>
+                                <br>
+                                <textarea class="box-set-new-value" name="description" required><?php echo $data['description']?></textarea>
                             </li>
                         </ul>
                     </div>

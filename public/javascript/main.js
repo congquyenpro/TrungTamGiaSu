@@ -56,7 +56,9 @@ document.getElementById("filter-clear3").onclick = function ()
 };
 
 
-const regbtn = document.getElementById("js-reg-btn");
-regbtn.onclick = function(){
-    alert("Chức năng đang bảo trì")
+// Thông báo cập nhật tính năng
+function warning(){
+    document.getElementById("js-reg-btn").onclick = function(){
+        alert("Chức năng đang được cập nhật");
+    };
 };

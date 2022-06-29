@@ -6,7 +6,7 @@ class extra_class extends Controllers{
         if(!isset($_SESSION['lever']) || $_SESSION['lever'] != 1){
             $actual_link = $this->getUrl();
             $_SESSION['error'] = "Bạn phải đăng nhập để tạo lớp";
-            header("Location: $actual_link/user/login");
+            header("Location: $actual_link/admin/login");
         }
         $model      = $this->model("subjectModels");
         $subject    = $model->getAllValues();
@@ -40,7 +40,22 @@ class extra_class extends Controllers{
         // gọi model và hàm lấy dữ liệu
         $model      = $this->model("postClassModels");
         $newClass   = $model->selectValues();
-        $this->view("tutor","tutor/newClassList","Danh sách lớp",$newClass);
+        $model      = $this->model("subjectModels");
+        $subject    = $model->getAllValues();
+        $this->view("tutor","tutor/newClassList","Danh sách lớp",[$newClass, $subject]);
+    }
+    // Tìm kiếm lớp
+    public function find_class(){
+
+        $subject_id = $_POST['subject'];
+        $lever      = $_POST['lever'];
+
+        // gọi model và hàm lấy dữ liệu
+        $model      = $this->model("postClassModels");
+        $newClass   = $model->findValue($subject_id, $lever);
+        $model      = $this->model("subjectModels");
+        $subject    = $model->getAllValues();
+        $this->view("tutor","tutor/newClassList","Danh sách lớp",[$newClass, $subject]);
     }
 
     // Xem lớp

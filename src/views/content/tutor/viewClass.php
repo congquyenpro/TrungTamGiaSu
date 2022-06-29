@@ -55,7 +55,7 @@
                 </div>
                 <div class="content-salary mb-20">
                     <p class="mb-5">Mức thu nhập: <span class="salary"><?php echo number_format(($data['price']*4*$data['day_in_week']), 0, '', '.')?> ₫/tháng</span></p>
-                    <a href="#" class="regit-btn" id="js-reg-btn">Đăng ký nhận lớp</a>
+                    <a onclick = "warning()"  class="regit-btn" id="js-reg-btn">Đăng ký nhận lớp</a>
                     <p class="fee-claim mt-5">Phí nhận lớp: <span class="fee-percent">40%</span> <span class="only-one">| Chỉ nộp phí 1 lần, những tháng tiếp theo sẽ không mất phí</span></p>
                 </div>
             </div>
