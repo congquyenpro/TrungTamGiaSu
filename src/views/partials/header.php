@@ -5,15 +5,15 @@
             <ul class="btn-home">
                 <?php if (isset($_SESSION['lever'])) { ?>
                     <?php if ($_SESSION['lever'] == 1) { ?>
-                        <li><a href="<?php echo $actual_link ?>/user/my_account" class="btn-tutor-blue">Quản lý tài khoản người dùng</a></li>
-                        <li><a href="<?php echo $actual_link ?>/user/logout" class="btn-tutor-logout">Đăng xuất</a></li>
+                        <li><a href="<?php echo $actual_link ?>/admin/my_account" class="btn-tutor-blue">Quản lý tài khoản admin</a></li>
+                        <li><a href="<?php echo $actual_link ?>/admin/logout" class="btn-tutor-logout">Đăng xuất</a></li>
                     <?php } else { ?>
                         <li><a href="<?php echo $actual_link ?>/tutor/my_account" class="btn-tutor-blue">Quản lý tài khoản gia sư</a></li>
                         <li><a href="<?php echo $actual_link ?>/tutor/logout" class="btn-tutor-logout">Đăng xuất</a></li>
                     <?php } ?>
                 <?php }else{ ?>
                     <li><a href="<?php echo $actual_link ?>/tutor/login" class="btn">Đăng kí làm gia sư</a></li>
-                    <li><a href="<?php echo $actual_link ?>/user/login" class="btn">Đăng ký thuê gia sư</a></li>
+                    <li><a href="<?php echo $actual_link ?>/home/hire" class="btn">Đăng ký thuê gia sư</a></li>
                 <?php } ?>
                 <li class="nav-phone">
                     <span><i class="fa-solid fa-phone"></i></span>
@@ -32,11 +32,12 @@
                 <a href="<?php echo $actual_link ?>/home/read#contact">Liên hệ</a>
                 <a href="<?php echo $actual_link?>/home/user_blog">Thông báo</a>
                 <a href="<?php echo $actual_link?>/home/tutor_blog">Blog gia sư</a>
-                <a href="<?php echo $actual_link?>/home/create_blog">Viết bài</a>
-                <?php if(isset($_SESSION['lever'])) { 
-                        if ($_SESSION['lever'] == 1) { ?>
+                <?php if(isset($_SESSION['lever'])) { ?>
+                    <a href="<?php echo $actual_link?>/home/create_blog">Viết Blog</a>
+                <?php if ($_SESSION['lever'] == 1) { ?>
                     <a href="<?php echo $actual_link?>/extra_class/create">Tạo lớp học</a>
-                <?php }} ?>
+                    <a href="<?php echo $actual_link?>/admin/client">Danh sách khách hàng</a>
+                <?php }}?>
                 <a href="<?php echo $actual_link?>/extra_class/class_list">Danh sách lớp mới</a>
             </nav>
 
