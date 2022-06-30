@@ -1,59 +1,38 @@
 <link rel="stylesheet" href="<?php echo $actual_link ?>/public/css/login_register.css">
+<link rel="stylesheet" href="<?php echo $actual_link ?>/public/css/register_hire.css">
+<span id="filter-clear"></span>
 <div class="main-container">
-    <div class="container active">
-        <div class="forms">
-            <!-- Registration Form -->
-            <div class="form signup">
-                <span class="title">Đăng kí tài khoản gia sư</span>
+<div class="modal">
+      <div class="modal-container js-modal-container">
+        <div class="modal-close js-close-modal">
+          <i class="ti-close"></i>
+        </div>  
+        <h2>Đăng kí tìm gia sư</h2>
+        <p id="alert-eros" style="color:red; transform: translateY(10px)"></p>  
+        <form class="reg-form" id="register-hires" action="<?php echo $actual_link ?>/home/hire_possessing" method="POST">
+          <input type="radio" id="woman" name="gender" value="0">
+          <label for="woman" style="margin-right: 20px;">Chị</label>
 
-                <form id="register-submit" method="post" action="<?php echo $actual_link ?>/tutor/register_processing">
-                    <?php
-                    if (isset($_SESSION['error'])) {
-                        echo "<p style='color:red; translateY(25px);'>" . $_SESSION['error'] . "</p>";
-                        unset($_SESSION['error']);
-                    }
-                    ?>
-                    <p id="alert-eros" style="color:red; transform: translateY(25px)"></p>
-                    <div class="input-field">
-                        <input id="name-regex" type="text" name="name" placeholder="Nhập tên của bạn" required>
-                        <i class="uil uil-user"></i>
-                    </div>
-                    <div class="input-field">
-                        <input id="email-regex" type="email" name="email" placeholder="Nhập email của bạn" required>
-                        <i class="uil uil-envelope icon"></i>
-                    </div>
-                    <div class="input-field">
-                        <input id="password-regex" type="password" name="password" class="password" placeholder="Tạo mật khẩu" required>
-                        <i class="uil uil-lock icon"></i>
-                    </div>
-                    <div class="input-field">
-                        <input id="confirm-password-regex" type="password" class="password" placeholder="Nhập lại mật khẩu" required>
-                        <i class="uil uil-lock icon"></i>
-                        <i class="uil uil-eye-slash showHidePw"></i>
-                    </div>
+          <input type="radio" id="men" name="gender" value="1">
+          <label for="men">Anh </label>
 
-                    <div class="checkbox-text">
-                        <div class="checkbox-content">
-                            <input type="checkbox" id="sigCheck" required>
-                            <label for="sigCheck" class="text">
-                                Bạn đồng ý với
-                                <a href=""> Điều khoản sử dụng</a>
-                            </label>
-                        </div>
-                    </div>
+          <br>
 
-                    <div class="input-field button">
-                        <input type="submit" value="Đăng kí">
-                    </div>
-                </form>
+          <label for="fname">Họ Và Tên</label>
+          <input type="text" id="name-regex" name="name" placeholder="Nhập họ và tên..." required>
 
-                <div class="login-signup">
-                    <span class="text">Đã có tài khoản?
-                        <a href="<?php echo $actual_link ?>/tutor/login" class="text login-link">Đăng nhập</a>
-                    </span>
-                </div>
-            </div>
-        </div>
+          <label for="lname">Email</label>
+          <input type="text" id="email-regex" name="email" placeholder="Nhập email..." required>
+
+          <label for="country">Số Điện Thoại</label>
+          <input type="text" id="phone-regex" name="phone" placeholder="Nhập số điện thoại..." required>
+
+          <label for="address">Địa Chỉ</label>
+          <input type="text" id="address" name="address" placeholder="Nhập địa chỉ..." required>
+
+          <input type="submit" value="Submit">
+        </form>
+      </div>
     </div>
 </div>
 <script src="<?php echo $actual_link?>/public/javascript/login_register.js"></script>

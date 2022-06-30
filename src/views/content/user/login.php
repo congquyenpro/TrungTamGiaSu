@@ -3,8 +3,8 @@
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <span class="title">Đăng nhập gia sư</span>
-                <form id="submit-login" method="post" action="<?php echo $actual_link ?>/tutor/login_processing">
+                <span class="title">Đăng nhập cho admin</span>
+                <form id="submit-login" method="post" action="<?php echo $actual_link ?>/admin/login_processing">
                     <?php
                     if (isset($_SESSION['success'])) {
                         echo "<p style='color:blue; translateY(25px);'>" . $_SESSION['success'] . "</p>";
@@ -39,11 +39,6 @@
                     </div>
                 </form>
 
-                <div class="login-signup">
-                    <span class="text">Chưa có tài khoản?
-                        <a href="<?php echo $actual_link ?>/tutor/register" class="text signup-link">Đăng kí ngay</a>
-                    </span>
-                </div>
             </div>
         </div>
     </div>
