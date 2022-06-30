@@ -39,8 +39,8 @@ class home extends Controllers{
             $this->view("user","createBlog","Viết Blog",[]);
         }else{
             $actual_link = $this->getUrl();
-            $_SESSION['error'] = "Bạn phải đăng nhập để tạo lớp";
-            header("Location: $actual_link/user/login");
+            $_SESSION['error'] = "Bạn phải đăng nhập để tạo blog";
+            header("Location: $actual_link/tutor/login");
         }
     }
     // Hiển thị blog của tôi
@@ -48,8 +48,8 @@ class home extends Controllers{
         // Kiểm tra đăng nhập
         if (!isset($_SESSION['lever'])){
             $actual_link = $this->getUrl();
-            $_SESSION['error'] = "Bạn phải đăng nhập để tạo lớp";
-            header("Location: $actual_link/user/login");
+            $_SESSION['error'] = "Bạn phải đăng nhập để tạo blog";
+            header("Location: $actual_link/tutor/login");
         }else{
             $search = "";
             if (isset($_GET['search'])){
@@ -86,6 +86,26 @@ class home extends Controllers{
         }else{
             header("Location: $actual_link/home/create_blog");
         }
+    }
+    public function hire(){
+        $this->view("user","user/register","Đăng kí thuê gia sư",[]);
+    }
+    public function hire_possessing(){
+        $model = $this->model('clientModels');
+        $name =addslashes($_POST['name']);
+        $gender = addslashes($_POST['gender']);
+        $email = addslashes($_POST['email']);
+        $phone = addslashes($_POST['phone']);
+        $address = addslashes($_POST['address']);
+
+        $model->createValue($name,$gender,$email,$phone,$address);
+        $actual_link = $this->getUrl();
+
+        header("Location: $actual_link/home/thank_hire");
+
+    }
+    public function thank_hire(){
+        $this->view("user","user/thank_register","Cảm ơn",[]);
     }
 }
 ?>
