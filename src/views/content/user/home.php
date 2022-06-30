@@ -43,7 +43,7 @@
                 <h1>Trung tâm gia sư</h1>
                 <p class="content-success">Mang thành công đến với bạn</p>
                 <p>Bạn muốn học giỏi? Đăng ký ngay! Đội ngũ gia sư giỏi của chúng tôi sẽ giúp bạn tiến bộ nhanh chóng.</p>
-                <a href="<?php echo $actual_link ?>/home/hire" class="btn-regit">Đăng ký thuê gia sư ngay</a>
+                <a href="#menu" class="btn-regit">Đăng ký thuê gia sư ngay</a>
             </div>
         </div>
     </section>
