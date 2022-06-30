@@ -56,7 +56,7 @@ document.getElementById("filter-clear3").onclick = function ()
 };
 
 
-// Thông báo cập nhật tính năng
+// Thông báo bảo trì
 function warning(){
     document.getElementById("js-reg-btn").onclick = function(){
         alert("Chức năng đang được cập nhật");

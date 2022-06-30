@@ -22,6 +22,9 @@ function isValid (string) {
     var re = /^[a-zA-Z!@#\$%\^\&*\)\(+=._-]{2,}$/g // regex here
     return re.test(removeAscent(string))
 }
+function isVietnamesePhoneNumber(number) {
+    return /(03|05|07|08|09|01[2|6|8|9])+([0-9]{8})\b/.test(number);
+}
 const container     = document.querySelector(".container"),
       pwShowHide    = document.querySelectorAll(".showHidePw"),
       pwFields      = document.querySelectorAll(".password"),
@@ -29,8 +32,10 @@ const container     = document.querySelector(".container"),
       name          = document.getElementById('name-regex'),
       password      = document.getElementById('password-regex'),
       confirm       = document.getElementById('confirm-password-regex'),
+      phone         = document.getElementById('phone-regex'),
       Login         = document.getElementById('submit-login'),
       Register      = document.getElementById('register-submit'),
+      Register_hires= document.getElementById('register-hires'),
       alertError    = document.getElementById('alert-eros');
 
     //   js code to show/hide password and change icon
@@ -61,7 +66,7 @@ const container     = document.querySelector(".container"),
                 alertError.innerHTML = "Email sai định dạng";
             }
         }
-    }else{
+    }else if (Register != null){
         Register.onsubmit = function(event){
             alertError.innerHTML = "";
             if (isValid(name.value) == false){
@@ -73,6 +78,20 @@ const container     = document.querySelector(".container"),
             }else if(password.value != confirm.value){
                 event.preventDefault();
                 alertError.innerHTML = "Mật khẩu không trùng";
+            }
+        }
+    }else if (Register_hires != null) {
+        Register_hires.onsubmit = function(event){
+            alertError.innerHTML = "";
+            if (isValid(name.value) == false){
+                event.preventDefault();
+                alertError.innerHTML = "Tên sai định dạng";
+            }else if (validateEmail(email.value) == null){
+                event.preventDefault();
+                alertError.innerHTML = "Email sai định dạng";
+            }else if (!isVietnamesePhoneNumber(phone.value)){
+                event.preventDefault();
+                alertError.innerHTML = "Số điện thoại sai định dạng";
             }
         }
     }
