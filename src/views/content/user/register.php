@@ -4,9 +4,9 @@
         <div class="forms">
             <!-- Registration Form -->
             <div class="form signup">
-                <span class="title">Đăng kí tài khoản người dùng</span>
+                <span class="title">Đăng kí tài khoản gia sư</span>
 
-                <form id="register-submit" method="post" action="<?php echo $actual_link ?>/user/register_processing">
+                <form id="register-submit" method="post" action="<?php echo $actual_link ?>/tutor/register_processing">
                     <?php
                     if (isset($_SESSION['error'])) {
                         echo "<p style='color:red; translateY(25px);'>" . $_SESSION['error'] . "</p>";
@@ -49,7 +49,7 @@
 
                 <div class="login-signup">
                     <span class="text">Đã có tài khoản?
-                        <a href="<?php echo $actual_link ?>/user/login" class="text login-link">Đăng nhập</a>
+                        <a href="<?php echo $actual_link ?>/tutor/login" class="text login-link">Đăng nhập</a>
                     </span>
                 </div>
             </div>
